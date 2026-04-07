@@ -1,9 +1,11 @@
+import useLocalStorage from "../hooks/useLocalStorage";
+
 import { createContext, useContext, useState } from "react";
 
 const TodoContext = createContext();
 
 export const TodoProvider = ({ children }) => {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useLocalStorage("todos", []);
   const [filter, setFilter] = useState("all");
 
   const addTodo = (text) => {

@@ -1,7 +1,8 @@
 import { useTodos } from "../context/TodoContext";
+import TodoItem from "./TodoItem";
 
 export default function TodoList() {
-  const { todos, toggleTodo, removeTodo, filter } = useTodos();
+  const { todos, filter } = useTodos();
 
   const filteredTodos = todos.filter((todo) => {
     if (filter === "completed") return todo.completed;
@@ -12,19 +13,7 @@ export default function TodoList() {
   return (
     <ul>
       {filteredTodos.map((todo) => (
-        <li key={todo.id}>
-          <span
-            onClick={() => toggleTodo(todo.id)}
-            style={{
-              cursor: "pointer",
-              textDecoration: todo.completed ? "line-through" : "none",
-            }}
-          >
-            {todo.text}
-          </span>
-
-          <button onClick={() => removeTodo(todo.id)}>❌</button>
-        </li>
+        <TodoItem key={todo.id} todo={todo} />
       ))}
     </ul>
   );

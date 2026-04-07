@@ -1,16 +1,29 @@
-# React + Vite
+# Todo React Avançado
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Descrição
+Aplicação de lista de tarefas (Todo List) desenvolvida com React, utilizando Hooks, Context API, memoização e persistência de dados com localStorage.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias utilizadas
+- React
+- Vite
+- JavaScript
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ⚙️ Funcionalidades
+- Adicionar tarefas
+- Marcar tarefas como concluídas
+- Remover tarefas
+- Filtrar tarefas (todas, concluídas e pendentes)
+- Persistência de dados com localStorage
 
-## React Compiler
+## 🧠 Conceitos aplicados
+- useState
+- useEffect
+- Context API (useContext)
+- Hook customizado (useLocalStorage)
+- Memoização com React.memo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ▶️ Como rodar o projeto
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev

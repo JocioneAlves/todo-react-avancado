@@ -8,11 +8,15 @@ const TodoItem = ({ todo }) => {
     <li>
       <span
         onClick={() => toggleTodo(todo.id)}
-        style={{ textDecoration: todo.completed ? "line-through" : "none" }}
+        style={{
+          cursor: "pointer",
+          textDecoration: todo.completed ? "line-through" : "none",
+        }}
       >
         {todo.text}
       </span>
-      <button onClick={() => removeTodo(todo.id)}>X</button>
+
+      <button onClick={() => removeTodo(todo.id)}>❌</button>
     </li>
   );
 };
